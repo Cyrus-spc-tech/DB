@@ -1,0 +1,45 @@
+{
+ "cells": [
+  {
+   "kind": 2,
+   "language": "sql",
+   "value": "show databases;",
+   "metadata": {
+    "connectionName": ""
+   }
+  },
+  {
+   "kind": 2,
+   "language": "sql",
+   "value": "use database name;\r\n",
+   "metadata": {
+    "connectionName": ""
+   }
+  },
+  {
+   "kind": 2,
+   "language": "sql",
+   "value": "show Tables;",
+   "metadata": {
+    "connectionName": ""
+   }
+  },
+  {
+   "kind": 2,
+   "language": "sql",
+   "value": "CREATE TABLE user (\r\n    user_id INT PRIMARY KEY,\r\n    username VARCHAR(50) NOT NULL,\r\n    email VARCHAR(100) NOT NULL,\r\n    created_at DATETIME DEFAULT CURRENT_TIMESTAMP\r\n);\r\n\r\nCREATE TABLE payment (\r\n    payment_id INT PRIMARY KEY,\r\n    user_id INT,\r\n    amount DECIMAL(10, 2) NOT NULL,\r\n    payment_date DATETIME DEFAULT CURRENT_TIMESTAMP,\r\n    FOREIGN KEY (user_id) REFERENCES user(user_id)\r\n);",
+   "metadata": {
+    "connectionName": ""
+   }
+  },
+  {
+   "kind": 2,
+   "language": "sql",
+   "value": "",
+   "metadata": {
+    "connectionName": ""
+   }
+  }
+ ],
+ "metadata": {}
+}
