@@ -35,6 +35,14 @@
   {
    "kind": 2,
    "language": "sql",
+   "value": "INSERT INTO user (user_id, username, email)\r\nVALUES (1, 'alice', 'alice@example.com'),\r\n    (2, 'bob', 'bob@example.com');\r\n\r\nINSERT INTO payment (payment_id, user_id, amount)\r\nVALUES (1, 1, 100.00),\r\n    (2, 2, 50.00);\r\n    ",
+   "metadata": {
+    "connectionName": ""
+   }
+  },
+  {
+   "kind": 2,
+   "language": "sql",
    "value": "",
    "metadata": {
     "connectionName": ""

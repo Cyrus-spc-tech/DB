@@ -1,0 +1,21 @@
+{
+ "cells": [
+  {
+   "kind": 2,
+   "language": "sql",
+   "value": "-- Sigmoid (logistic) function for a value x\r\nSELECT \r\n    1.0 / (1.0 + EXP(-x)) AS sigmoid_value\r\nFROM \r\n    (SELECT 0.5 AS x) AS input_value;\r\n\r\n-- Logistic regression prediction for a linear combination of features\r\nSELECT \r\n    1.0 / (1.0 + EXP(-(a * feature1 + b * feature2 + c))) AS probability\r\nFROM \r\n    (SELECT 1.2 AS feature1, 0.7 AS feature2, 0.8 AS a, -0.5 AS b, 0.3 AS c) AS params;",
+   "metadata": {
+    "connectionName": ""
+   }
+  },
+  {
+   "kind": 2,
+   "language": "sql",
+   "value": "SELECT \r\n    COUNT(*) AS total_count,\r\n    SUM(column_name) AS total_sum,\r\n    AVG(column_name) AS average_value,\r\n    MIN(column_name) AS minimum_value,\r\n    MAX(column_name) AS maximum_value\r\nFROM \r\n    table_name;",
+   "metadata": {
+    "connectionName": ""
+   }
+  }
+ ],
+ "metadata": {}
+}
